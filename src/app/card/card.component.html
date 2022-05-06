@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem;"  *ngFor="let user of cardUser">
+    
+    <img class="card-img-top" src="{{user.imageUrl}}" alt="Card image cap">
+    
+    <div class="card-body" >
+      <p class="card-text"> {{user.name}}</p>
+      <p class="card-text"> {{user.mail}}</p>
+      <p class="card-text"> {{user.location.address}}</p>
+      <p class="card-text"> {{user.orders.length}}</p>
+      
+      
+      <button>Edit</button>
+      <button (click)="onDelete(user.id)">Delete</button>
+    </div>
+ 
